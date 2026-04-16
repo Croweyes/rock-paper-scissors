@@ -16,4 +16,10 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    pick = prompt("Your turn")
+    console.log(pick)
+}
+
 getComputerChoice()
+getHumanChoice()
