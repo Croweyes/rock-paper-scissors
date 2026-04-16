@@ -1,3 +1,6 @@
+let humanScore = 0
+let computerScore = 0
+
 console.log("Lets play rock, scissors, paper!")
 function getComputerChoice() {
     let pick
