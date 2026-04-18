@@ -3,11 +3,12 @@ let computerScore = 0
 
  
 console.log("Lets play rock, scissors, paper!")
-let computerChoice = getComputerChoice()
-let humanChoice = getHumanChoice()
-playRound(humanChoice, computerChoice)
+let computerChoice
+let humanChoice 
+playGame()
+/*playRound(humanChoice, computerChoice)
 console.log("Your score: " + humanScore)
-console.log("Computer's score: " + computerScore)
+console.log("Computer's score: " + computerScore)*/
 
 function getComputerChoice() {
     let pick
@@ -56,6 +57,27 @@ function playRound(humanChoice, computerChoice) {
     else {
         computerScore += 1
         console.log("You lose! " + computerChoice + " beats " + humanChoice + "!")
+    }
+}
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        console.log("Round " + (i + 1) + "!")
+        computerChoice = getComputerChoice()
+        humanChoice = getHumanChoice()
+        playRound(humanChoice, computerChoice)
+        console.log("Your score: " + humanScore)
+        console.log("Computer's score: " + computerScore)
+    }
+    
+    if (humanScore > computerScore) {
+        console.log("Game over. Congratulations! You won!")
+    }
+    else if (humanScore === computerScore) {
+        console.log("Game over. It's a tie!")
+    }
+    else {
+        console.log("Game over. Better luck next time")
     }
 }
 
